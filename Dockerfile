@@ -25,4 +25,4 @@ RUN chmod +x /usr/local/bin/import-database.sh
 EXPOSE 3306
 EXPOSE 80
 
-RUN /usr/sbin/mysqld &
+RUN /usr/sbin/mysqld
