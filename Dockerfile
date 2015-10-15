@@ -19,6 +19,8 @@ ENV right READ
 # Install starting script
 ADD ./get-and-clean-sql.sh /usr/local/bin/get-and-clean-sql.sh
 ADD ./import-database.sh /usr/local/bin/import-database.sh
+RUN chmod +x /usr/local/bin/get-and-clean-sql.sh
+RUN chmod +x /usr/local/bin/import-database.sh
 
 EXPOSE 3306
 EXPOSE 80

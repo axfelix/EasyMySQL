@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Import the database that was cleaned in the previous script
-mysql --default-character-set=utf8 < import.sql
-rm import.sql
+mysql --default-character-set=utf8 < /tmp/import.sql
+rm /tmp/import.sql
 mysqladmin shutdown
 echo "finished"
 
