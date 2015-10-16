@@ -26,4 +26,4 @@ EXPOSE 3306
 EXPOSE 80
 
 RUN /usr/sbin/mysqld &
-RUN /usr/sbin/apache2 &
+RUN service apache2 start
