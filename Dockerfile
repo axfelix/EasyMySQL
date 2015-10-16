@@ -25,5 +25,5 @@ RUN chmod +x /usr/local/bin/import-database.sh
 EXPOSE 3306
 EXPOSE 80
 
-RUN service mysqld start
-RUN service apache2 start
+RUN /usr/sbin/mysqld &
+RUN /usr/sbin/apache2 &
