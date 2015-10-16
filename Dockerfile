@@ -29,6 +29,7 @@ ADD ./import-database.sh /usr/local/bin/import-database.sh
 RUN chmod +x /usr/local/bin/get-and-clean-sql.sh
 RUN chmod +x /usr/local/bin/import-database.sh
 
+# change this; we don't want to expose 3306 once this is all working
 EXPOSE 3306
 EXPOSE 80
 
