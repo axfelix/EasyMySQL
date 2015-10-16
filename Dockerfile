@@ -6,6 +6,13 @@ MAINTAINER Alex Garnett
 RUN apt-get update
 RUN apt-get upgrade -y
 
+# Apache setup
+ENV HTTPD_PREFIX /usr/local/apache2
+ENV PATH $PATH:$HTTPD_PREFIX/bin
+RUN mkdir -p "$HTTPD_PREFIX" \
+	&& chown www-data:www-data "$HTTPD_PREFIX"
+WORKDIR $HTTPD_PREFIX
+
 # Install mysql client and server
 RUN apt-get -y install mysql-client mysql-server curl apache2
 
